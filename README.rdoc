@@ -1,0 +1,14 @@
+1. sencha touch sdk 최신 버전(2.3.1)을 설치 
+
+2. sencha sdk tools (2.0.0 beta 3) 설치 
+
+3. sencha cmd (4.0.4.84) 설치
+
+4. sencha touch sdk, sdk tools, cmd google drive에 공유됨
+
+5. fleet-touch 폴더에 sencha touch sdk를 touch 폴더 아래 압축을 푼다.
+
+6. ~/Sites 폴더에 fleet-touch 위치한 후 브라우저로 http://localhost/~{user-name}/fleet-touch 로 접속
+
+7. 추후에 빌드 (현재는 에러 발생)
+$ sencha app build production
