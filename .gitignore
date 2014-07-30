@@ -1,0 +1,8 @@
+touch*
+build
+archive
+*.scssc
+.DS_Store
+
+
+app/.DS_Store
