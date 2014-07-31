@@ -267,7 +267,7 @@ Ext.define('FleetTouch.controller.monitor.Track', {
 			}
 			
 			// 30분 Gap은 새로운 Trip으로 판단한다.
-			if(last && (last.get('datetime') > record.get('datetime') + 30 * 60 * 1000)) {
+			if(last && (last.get('trace_time') > record.get('trace_time') + 30 * 60 * 1000)) {
 				var avg_v = Ext.Array.sum(v) / v.length;
 				self.getTrack().addTrackLine(map, traces, trip, avg_v, distance);
 

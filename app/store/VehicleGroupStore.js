@@ -5,17 +5,26 @@ Ext.define('FleetTouch.store.VehicleGroupStore', {
 		pageSize : 1000,
 
 		fields : [ {
-			name : 'key',
-			type : 'string'
-		}, {
 			name : 'id',
 			type : 'string'
 		}, {
-			name : 'desc',
+			name : 'domain_id',
+			type : 'string'
+		}, {
+			name : 'name',
+			type : 'string'
+		}, {
+			name : 'description',
 			type : 'string'
 		}, {
 			name : 'vehicles',
 			type : 'auto'
+		}, {
+			name : 'creator_id',
+			type : 'integer'
+		}, {
+			name : 'updater_id',
+			type : 'integer'
 		}, {
 			name : 'created_at',
 			type : 'date',

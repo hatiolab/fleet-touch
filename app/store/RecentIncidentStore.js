@@ -11,14 +11,18 @@ Ext.define('FleetTouch.store.RecentIncidentStore', {
 		pageSize : 8,
 
         fields: [{
-            name: 'key',
+            name: 'id',
             type: 'string'
         },
-        {
+		{
+			name: 'domain_id',
+			type: 'string'
+		},
+        /*{
             name: 'datetime',
             type: 'date',
             dateFormat: 'time'
-        },
+        },*/
         {
             name: 'terminal_id',
             type: 'string'
@@ -83,6 +87,14 @@ Ext.define('FleetTouch.store.RecentIncidentStore', {
             name: 'video_clip',
             type: 'string'
         },
+		{
+			name: 'creator_id',
+			type: 'string'
+		},
+		{
+			name: 'updater_id',
+			type: 'string'
+		},
         {
             name: 'created_at',
             type: 'date',
@@ -95,7 +107,7 @@ Ext.define('FleetTouch.store.RecentIncidentStore', {
         }],
 
 		sorters : [ {
-			property : 'datetime',
+			property : 'created_at',
 			direction : 'DESC'
 		} ],
 

@@ -311,7 +311,7 @@ Ext.define('FleetTouch.controller.Nav', {
                 + ', '
                 + incident.get('driver_id')
                 + '<span>'
-                + Ext.Date.format(incident.get('datetime'),
+                + Ext.Date.format(incident.get('created_at'),
                 'D Y-m-d H:i:s') + '</span></a>'
             });
         }
@@ -326,7 +326,7 @@ Ext.define('FleetTouch.controller.Nav', {
 				xtype : 'button',
 				group : record,
 				html : '<a href="#">'
-						+ record.data.desc
+						+ record.data.description
 						+ '<span>('
 						+ record.data.vehicles.length
 						+ ')</span></a>'
@@ -343,7 +343,7 @@ Ext.define('FleetTouch.controller.Nav', {
 				xtype : 'button',
 				group : record,
 				html : '<a href="#">'
-						+ record.data.desc
+						+ record.data.description
 						+ '<span>('
 						+ record.data.drivers.length
 						+ ')</span></a>'

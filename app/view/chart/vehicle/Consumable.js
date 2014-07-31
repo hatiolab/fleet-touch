@@ -71,7 +71,8 @@ Ext.define('FleetTouch.view.chart.vehicle.Consumable', {
 	buildChart : function(store) {
 		var self = this;
 		var store = new Ext.create('Ext.data.JsonStore', {
-		    fields: ['consumable_item', 'health_rate', 'repl_unit', 'status', 'next_repl_mileage', 'miles_since_last_repl', 'repl_mileage', 'accrued_cost', 'repl_time', 'miles_last_repl'],
+			
+		    fields: ['name', 'health_rate', 'repl_unit', 'status', 'next_repl_mile', 'last_repl_date', 'cycle_repl_mile', 'cumulative_cost', 'cycle_repl_duration', 'last_repl_mile'],
 		    data: []
 		});
 		
@@ -141,7 +142,7 @@ Ext.define('FleetTouch.view.chart.vehicle.Consumable', {
                 {
                     type: 'Category',
                     position: 'bottom',
-                    fields: ['consumable_item'],
+                    fields: ['name'],
                     title: T('label.consumable_item'),
 					label: {
 				        rotate: {
@@ -174,7 +175,7 @@ Ext.define('FleetTouch.view.chart.vehicle.Consumable', {
 						orientation: 'horizontal',
 						color: '#333'
                     },
-                    xField: 'consumable_item',
+                    xField: 'name',
                     yField: 'health_rate'
                 }
             ],
@@ -184,8 +185,8 @@ Ext.define('FleetTouch.view.chart.vehicle.Consumable', {
 			    listeners: {
 			        show: function(interaction, item, panel) {
 			            var record = item.storeItem;
-						var title = record.data.consumable_item + ' : ' + (record.data.health_rate * 100) + '% (' + record.data.status + ')';
-						var msg = record.data.consumable_item + ' ' + T('button.reset') + ' ' + T('msg.confirm_run');
+						var title = record.data.name + ' : ' + (record.data.health_rate * 100) + '% (' + record.data.status + ')';
+						var msg = record.data.name + ' ' + T('button.reset') + ' ' + T('msg.confirm_run');
 						Ext.Msg.show({
 							title : title,
 							message : msg,
@@ -199,7 +200,7 @@ Ext.define('FleetTouch.view.chart.vehicle.Consumable', {
 										msg,
 										function(answer) {
 											if(answer == "yes") {
-												self.resetConsumable(record.data.consumable_item);
+												self.resetConsumable(record.data.name);
 											}
 										});
 								}								
@@ -218,7 +219,7 @@ Ext.define('FleetTouch.view.chart.vehicle.Consumable', {
 			method : 'POST',
 			params : {
 				vehicle_id : this.vehicle,
-				consumable_item : consumableItem
+				name : consumableItem
 			},
 			success : function(response) {
 				var resultObj = Ext.JSON.decode(response.responseText);

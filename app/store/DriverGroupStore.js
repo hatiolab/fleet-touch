@@ -7,17 +7,26 @@ Ext.define('FleetTouch.store.DriverGroupStore', {
 		pageSize : 1000,
 
 		fields : [ {
-			name : 'key',
-			type : 'string'
-		}, {
 			name : 'id',
 			type : 'string'
 		}, {
-			name : 'desc',
+			name : 'domain_id',
+			type : 'string'
+		}, {
+			name : 'name',
+			type : 'string'
+		}, {
+			name : 'description',
 			type : 'string'
 		}, {
 			name : 'drivers',
 			type : 'auto'
+		}, {
+			name : 'creator_id',
+			type : 'string'
+		}, {
+			name : 'updater_id',
+			type : 'string'
 		}, {
 			name : 'created_at',
 			type : 'date',

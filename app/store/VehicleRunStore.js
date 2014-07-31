@@ -7,22 +7,25 @@ Ext.define('FleetTouch.store.VehicleRunStore', {
 		remoteFilter : true,
 		
 		groupField : 'year',
-
+		  
 		fields : [ {
-			name : 'key',
+			name : 'id',
+			type : 'string'
+		}, {
+			name : 'domain_id',
+			type : 'string'
+		}, {
+			name : 'vehicle_id',
 			type : 'string'
 		}, {
 			name : 'vehicle',
-			type : 'string'
+			type : 'auto'
 		}, {
-			name : 'year',
+			name : 'run_year',
 			type : 'integer',
 		}, {
-			name : 'month',
+			name : 'run_month',
 			type : 'integer',		
-		}, {
-			name : 'month_str',
-			type : 'string',
 		}, {
 			name : 'run_dist',
 			type : 'float'
@@ -57,6 +60,9 @@ Ext.define('FleetTouch.store.VehicleRunStore', {
 			name : 'idle_time',
 			type : 'integer'			
 		}, {
+			name : 'inc_cnt',
+			type : 'integer'
+		}, {
 			name : 'oos_cnt',
 			type : 'integer'
 		}, {
@@ -65,13 +71,17 @@ Ext.define('FleetTouch.store.VehicleRunStore', {
 		}, {
 			name : 'mnt_time',
 			type : 'integer'
+		}, {
+			name : 'updated_at',
+			type : 'date',
+			dateFormat:'time'
 		} ],
 
 		sorters : [ {
-			property : 'year',
+			property : 'run_year',
 			direction : 'ASC'
 		},{
-			property : 'month',
+			property : 'run_month',
 			direction : 'ASC'
 		} ],
 

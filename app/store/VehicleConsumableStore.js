@@ -3,52 +3,61 @@ Ext.define('FleetTouch.store.VehicleConsumableStore', {
 
 	config : {
 		remoteFilter : true,
-		
+		  
 		fields : [ 
 			{
-				name : 'key',
+				name : 'id',
+				type : 'string'
+			}, {
+				name : 'domain_id',
 				type : 'string'
 			}, {
 				name : 'vehicle_id',
 				type : 'string'				
-			}, {			
-				name : 'consumable_item',
+			}, {
+				name : 'name',
 				type : 'string'
+			}, {
+				name : 'description',
+				type : 'string'
+			}, {
+				name : 'status',
+				type : 'string'
+			}, {
+				name : 'health_rate',
+				type : 'float'
+			}, {
+				name : 'cycle_repl_mile',
+				type : 'integer'
+			}, {
+				name : 'cycle_repl_duration',
+				type : 'integer'
 			}, {
 				name : 'repl_unit',
 				type : 'string'
-			}, {			
-				name : 'repl_mileage',
-				type : 'int'
-			}, {
-				name : 'repl_time',
-				type : 'int'
 			}, {
 				name : 'last_repl_date',
 				type : 'date',
 				dateFormat : 'time'
 			}, {
-				name : 'miles_last_repl',
-				type : 'int'
-			}, {
-				name : 'miles_since_last_repl',
-				type : 'int'				
-			}, {
-				name : 'next_repl_mileage',
-				type : 'int'
+				name : 'last_repl_mile',
+				type : 'integer'
 			}, {
 				name : 'next_repl_date',
 				type : 'date',
 				dateFormat : 'time'
 			}, {
-				name : 'accrued_cost',
+				name : 'next_repl_mile',
+				type : 'integer'
+			}, {
+				name : 'cumulative_cost',
 				type : 'float'
 			}, {
-				name : 'health_rate',
-				type : 'float'
+				name : 'creator_id',
+				type : 'integer'
 			}, {
-				name : 'status',
-				type : 'string'
+				name : 'updater_id',
+				type : 'integer'
 			}, {
 				name : 'created_at',
 				type : 'date',

@@ -420,7 +420,7 @@ Ext.define('FleetTouch.view.monitor.InfoBack', {
 		                + ', '
 		                + incident.get('driver_id')
 		                + '</a><span>'
-		                + Ext.Date.format(incident.get('datetime'),
+		                + Ext.Date.format(incident.get('created_at'),
 		                'D Y-m-d H:i:s') + '</span>'
 				})
 			} else {

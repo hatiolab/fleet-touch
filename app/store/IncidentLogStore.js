@@ -7,17 +7,13 @@ Ext.define('FleetTouch.store.IncidentLogStore', {
 		pageSize : 1000,
 		
 		remoteFilter : true,
-
+		  
 		fields : [ {
-			name : 'key',
+			name : 'id',
 			type : 'string'
 		}, {
-			name : 'incident',
+			name : 'domain_id',
 			type : 'string'
-		}, {
-			name : 'datetime',
-			type : 'date',
-			dateFormat:'time'
 		}, {
 			name : 'terminal_id',
 			type : 'string'
@@ -27,6 +23,13 @@ Ext.define('FleetTouch.store.IncidentLogStore', {
 		}, {
 			name : 'driver_id',
 			type : 'string'
+		}, {
+			name : 'incident_id',
+			type : 'string'
+		}, {
+			name : 'incident_date',
+			type : 'date',
+			dateFormat:'time'
 		}, {
 			name : 'lat',
 			type : 'float'
@@ -45,6 +48,12 @@ Ext.define('FleetTouch.store.IncidentLogStore', {
 		}, {
 			name : 'accelate_z',
 			type : 'float'
+		}, {
+			name : 'creator_id',
+			type : 'string'
+		}, {
+			name : 'updater_id',
+			type : 'string'
 		}, {
 			name : 'created_at',
 			type : 'date',

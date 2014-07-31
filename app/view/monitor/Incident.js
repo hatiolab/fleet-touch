@@ -40,7 +40,7 @@ Ext.define('FleetTouch.view.monitor.Incident', {
 			    url : '/incident/save',
 				method : 'POST',
 			    params : {
-					key : self.incident.get('key'),
+					id : self.incident.get('id'),
 			        confirm : value[0] ? 'on' : 'off'
 			    },
 			    success : function(response) {
@@ -145,8 +145,8 @@ Ext.define('FleetTouch.view.monitor.Incident', {
 		 */
 		this.getLogStore().clearFilter(true);
 		this.getLogStore().filter([ {
-			property : 'incident',
-			value : incident.get('key')
+			property : 'incident_id',
+			value : incident.get('id')
 		} ]);
 		this.getLogStore().load();
 		
@@ -377,12 +377,12 @@ Ext.define('FleetTouch.view.monitor.Incident', {
 					driver_name : '',
 					vehicle_name : '',
 					location : '',
-					datetime : ''
+					incident_date : ''
 				},
 				tpl : [
 				'<div class="infoID">{driver_id}({driver_name}) , {vehicle_id}({registration_number})</div>',
                 '<div class="infoText">'+ T('label.location') +' : {location}</div>',
-                '<div class="infoText">'+ T('label.time') +' : {datetime} </div>'
+                '<div class="infoText">'+ T('label.time') +' : {incident_date} </div>'
 				]
 			}]
 		}, {

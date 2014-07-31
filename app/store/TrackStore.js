@@ -7,7 +7,13 @@ Ext.define('FleetTouch.store.TrackStore', {
 		remoteFilter : true,
 
 		fields : [ {
-			name : 'key',
+			name : 'id',
+			type : 'string'
+		}, {
+			name : 'domain_id',
+			type : 'string'
+		}, {
+			name : 'terminal_id',
 			type : 'string'
 		}, {
 			name : 'vehicle_id',
@@ -22,16 +28,12 @@ Ext.define('FleetTouch.store.TrackStore', {
 			name : 'lng',
 			type : 'number'
 		}, {
+			name : 'trace_time',
+			type : 'date',
+			dateFormat : 'time'
+		}, {
 			name : 'velocity',
-			type : 'number'
-		}, {
-			name : 'datetime',
-			type : 'date',
-			dateFormat : 'time'
-		}, {
-			name : 'created_at',
-			type : 'date',
-			dateFormat : 'time'
+			type : 'float'
 		} ],
 
 		sorters : [ {

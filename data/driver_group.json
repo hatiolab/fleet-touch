@@ -1,8 +1,8 @@
 {
-total: 5,
-items: [
+"total": 5,
+"items": [
 {
-drivers: [
+"drivers": [
 "D001",
 "D002",
 "D003",
@@ -14,14 +14,17 @@ drivers: [
 "D009",
 "D010"
 ],
-id: "A",
-updated_at: 1335429885519,
-desc: "A",
-created_at: 1335429885519,
-key: "ag5zfmdyZWVuLWZsZWV0c3ImCxIHQ29tcGFueSIHdml0aXplbgwLEgtEcml2ZXJHcm91cCIBQQw"
+"id": "A",
+"domain_id": "1",
+"name": "A",
+"creator_id": "1",
+"updater_id": "1",
+"updated_at": 1335429885519,
+"description": "A",
+"created_at": 1335429885519
 },
 {
-drivers: [
+"drivers": [
 "D011",
 "D012",
 "D013",
@@ -33,14 +36,17 @@ drivers: [
 "D019",
 "D020"
 ],
-id: "B",
-updated_at: 1335429897387,
-desc: "B",
-created_at: 1335429897387,
-key: "ag5zfmdyZWVuLWZsZWV0c3ImCxIHQ29tcGFueSIHdml0aXplbgwLEgtEcml2ZXJHcm91cCIBQgw"
+"id": "B",
+"domain_id": "1",
+"name": "A",
+"creator_id": "1",
+"updater_id": "1",
+"updated_at": 1335429897387,
+"description": "B",
+"created_at": 1335429897387
 },
 {
-drivers: [
+"drivers": [
 "D021",
 "D022",
 "D023",
@@ -52,14 +58,17 @@ drivers: [
 "D029",
 "D030"
 ],
-id: "C",
-updated_at: 1335429908062,
-desc: "C",
-created_at: 1335429908062,
-key: "ag5zfmdyZWVuLWZsZWV0c3ImCxIHQ29tcGFueSIHdml0aXplbgwLEgtEcml2ZXJHcm91cCIBQww"
+"id": "C",
+"domain_id": "1",
+"name": "A",
+"creator_id": "1",
+"updater_id": "1",
+"updated_at": 1335429908062,
+"description": "C",
+"created_at": 1335429908062
 },
 {
-drivers: [
+"drivers": [
 "D031",
 "D032",
 "D033",
@@ -71,14 +80,17 @@ drivers: [
 "D039",
 "D040"
 ],
-id: "D",
-updated_at: 1335429919537,
-desc: "D",
-created_at: 1335429919537,
-key: "ag5zfmdyZWVuLWZsZWV0c3ImCxIHQ29tcGFueSIHdml0aXplbgwLEgtEcml2ZXJHcm91cCIBRAw"
+"id": "D",
+"domain_id": "1",
+"name": "A",
+"creator_id": "1",
+"updater_id": "1",
+"updated_at": 1335429919537,
+"description": "D",
+"created_at": 1335429919537
 },
 {
-drivers: [
+"drivers": [
 "D041",
 "D042",
 "D043",
@@ -90,12 +102,15 @@ drivers: [
 "D049",
 "D050"
 ],
-id: "E",
-updated_at: 1335429929866,
-desc: "E",
-created_at: 1335429929866,
-key: "ag5zfmdyZWVuLWZsZWV0c3ImCxIHQ29tcGFueSIHdml0aXplbgwLEgtEcml2ZXJHcm91cCIBRQw"
+"id": "E",
+"domain_id": "1",
+"name": "A",
+"creator_id": "1",
+"updater_id": "1",
+"updated_at": 1335429929866,
+"description": "E",
+"created_at": 1335429929866
 }
 ],
-success: true
+"success": true
 }

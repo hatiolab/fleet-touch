@@ -24,7 +24,7 @@ Ext.define('FleetTouch.view.chart.vehicle.Running', {
 		this.callParent(arguments);	
 		
 		this.chartStore = Ext.create('Ext.data.JsonStore', {
-			fields : ['year', 'month', 'consmpt', 'oos_cnt', 'co2_emss', 'mnt_time', 'mnt_cnt', 'run_dist', 'run_time', 'effcc'],
+			fields : ['run_year', 'run_month', 'consmpt', 'oos_cnt', 'co2_emss', 'mnt_time', 'mnt_cnt', 'run_dist', 'run_time', 'effcc'],
 			data : []
 		});
 
@@ -97,7 +97,7 @@ Ext.define('FleetTouch.view.chart.vehicle.Running', {
                 {
                     type: 'Category',
                     position: 'bottom',
-                    fields: ['month_str'],
+                    fields: ['run_month'],
                     title: T('label.month')
                 },
                 {
@@ -125,7 +125,7 @@ Ext.define('FleetTouch.view.chart.vehicle.Running', {
                 fill: true,
                 smooth: true,
                 axis: 'left',
-                xField: 'month_str',
+                xField: 'run_month',
                 yField: 'run_time',
                 title: T('label.run_time')
             },
@@ -138,7 +138,7 @@ Ext.define('FleetTouch.view.chart.vehicle.Running', {
                 fill: true,
                 smooth: true,
                 axis: 'right',
-                xField: 'month_str',
+                xField: 'run_month',
                 yField: 'run_dist',
                 title: T('label.run_dist')
             }
@@ -165,7 +165,7 @@ Ext.define('FleetTouch.view.chart.vehicle.Running', {
                 {
                     type: 'Category',
                     position: 'bottom',
-                    fields: ['month_str'],
+                    fields: ['run_month'],
                     title: T('label.month')
                 },
                 {
@@ -193,7 +193,7 @@ Ext.define('FleetTouch.view.chart.vehicle.Running', {
                 // fill: true,
                 smooth: true,
                 axis: 'left',
-                xField: 'month_str',
+                xField: 'run_month',
                 yField: ['consmpt'],
                 title: T('label.fuel_consumption')
             }, {
@@ -205,7 +205,7 @@ Ext.define('FleetTouch.view.chart.vehicle.Running', {
                 fill: true,
                 smooth: true,
                 axis: 'right',
-                xField: 'month_str',
+                xField: 'run_month',
                 yField: 'effcc',
                 title: T('label.fuel_efficiency')
             }

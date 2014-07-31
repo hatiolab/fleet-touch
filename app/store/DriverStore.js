@@ -7,33 +7,42 @@ Ext.define('FleetTouch.store.DriverStore', {
 		remoteFilter : true,
 
 		pageSize : 1,
-
+		  
 		fields : [ {
-			name : 'key',
+			name : 'id',
+			type : 'string'
+		}, {
+			name : 'domain_id',
 			type : 'string'
 		}, {
 			name : 'name',
 			type : 'string'
 		}, {
-			name : 'id',
-			type : 'string'
-		}, {
-			name : 'division',
-			type : 'string'
-		}, {
-			name : 'title',
+			name : 'description',
 			type : 'string'
 		}, {
 			name : 'social_id',
 			type : 'string'
 		}, {
-			name : 'phone_no_1',
+			name : 'title',
 			type : 'string'
 		}, {
-			name : 'phone_no_2',
+			name : 'division',
+			type : 'string'
+		}, {
+			name : 'phone_no',
+			type : 'string'
+		}, {
+			name : 'mobile_no',
 			type : 'string'
 		}, {
 			name : 'image_clip',
+			type : 'string'
+		}, {
+			name : 'creator_id',
+			type : 'string'
+		}, {
+			name : 'updater_id',
 			type : 'string'
 		}, {
 			name : 'created_at',

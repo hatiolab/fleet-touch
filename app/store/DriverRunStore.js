@@ -7,22 +7,28 @@ Ext.define('FleetTouch.store.DriverRunStore', {
 		remoteFilter : true,
 
 		groupField : 'year',
-
+		  
 		fields : [ {
-			name : 'driver',
+			name : 'id',
 			type : 'string'
 		}, {
-			name : 'year',
+			name : 'domain_id',
+			type : 'string'
+		}, {
+			name : 'driver_id',
+			type : 'string'
+		}, {
+			name : 'driver',
+			type : 'auto'
+		}, {
+			name : 'run_year',
 			type : 'integer'
 		}, {
-			name : 'month',
+			name : 'run_month',
 			type : 'integer'
-		}, {
-			name : 'month_str',
-			type : 'string',
 		}, {
 			name : 'run_dist',
-			type : 'float'
+			type : 'integer'
 		}, {
 			name : 'run_time',
 			type : 'integer'
@@ -56,13 +62,17 @@ Ext.define('FleetTouch.store.DriverRunStore', {
 		}, {
 			name : 'inc_cnt',
 			type : 'integer'
+		}, {
+			name : 'updated_at',
+			type : 'date',
+			dateFormat:'time'
 		} ],
 
 		sorters : [ {
-			property : 'year',
+			property : 'run_year',
 			direction : 'ASC'
 		},{
-			property : 'month',
+			property : 'run_month',
 			direction : 'ASC'
 		} ],	
 
@@ -70,7 +80,7 @@ Ext.define('FleetTouch.store.DriverRunStore', {
 			type : 'ajax',
 			url : window.location.pathname.indexOf('/m/') === 0 ? '/driver_run' : 'data/driver_run.json',
 			extraParams : {
-				select : [ 'driver', 'year', 'month', 'run_dist', 'run_time', 'consmpt', 'co2_emss', 'effcc', 'sud_accel_cnt', 'sud_brake_cnt', 'eco_drv_time', 'ovr_spd_time', 'inc_cnt' ]
+				select : [ 'driver', 'run_year', 'run_month', 'run_dist', 'run_time', 'consmpt', 'co2_emss', 'effcc', 'sud_accel_cnt', 'sud_brake_cnt', 'eco_drv_time', 'ovr_spd_time', 'inc_cnt' ]
 			},
 			reader : {
 				type : 'json',
