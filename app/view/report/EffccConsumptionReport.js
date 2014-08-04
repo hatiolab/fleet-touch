@@ -65,10 +65,6 @@ Ext.define('FleetTouch.view.report.EffccConsumptionReport', {
 				data : []
 			}),
 			
-			interactions : [
-				'panzoom', 'itemhighlight'
-			],
-			
 			axes : [ {
 				type : 'numeric',
 				position : 'bottom',
@@ -83,21 +79,18 @@ Ext.define('FleetTouch.view.report.EffccConsumptionReport', {
 				minimum : 0
 			} ],
 			
-			series : [ {
-				type : 'scatter',
-				axis : 'left',
-				fill : true,
-				smooth : true,
-				marker : {
-					radius : 5,
-					size : 5
+			series: [ {
+				type: 'scatter',
+				// fill: true,
+				smooth: true,
+				markerConfig: {
+					radius: 5,
+					size: 5
 				},
-				highlightCfg : {
-					strokeStyle : 'red',
-					lineWidth : 2
-				},
-				xField : 'consmpt',
-				yField : ['effcc']
+				axis: 'left',
+				highlight: true,
+				xField: 'consmpt',
+				yField: ['effcc']
 			} ]
 		};
 	}

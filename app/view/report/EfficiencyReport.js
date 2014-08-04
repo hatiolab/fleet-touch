@@ -4,11 +4,12 @@ Ext.define('FleetTouch.view.report.EfficiencyReport', {
 	
 	xtype : 'rpt_effcc_trend',
 	
-	requires : ['Ext.Carousel',
+	requires : [
+		'Ext.Carousel',
 		'Ext.chart.Chart',
-	    'Ext.chart.axis.Numeric',
-	    'Ext.chart.axis.Category',
-		'Ext.chart.series.Bar',
+		'Ext.chart.axis.Numeric',
+		'Ext.chart.axis.Category',
+		'Ext.chart.series.Column',
 		'Ext.chart.series.Line',
 		'Ext.data.JsonStore'
 	],
@@ -116,7 +117,7 @@ Ext.define('FleetTouch.view.report.EfficiencyReport', {
 					maxBarWidth : 30
 				}
 			}, {
-				type : 'bar',
+				type : 'column',
 				fill : true,
 				smooth : true,
 				axis : 'left',

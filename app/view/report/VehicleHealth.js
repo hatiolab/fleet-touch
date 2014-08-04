@@ -6,9 +6,9 @@ Ext.define('FleetTouch.view.report.VehicleHealth', {
 	
 	requires: [
 		'Ext.chart.Chart',
-        'Ext.chart.axis.Numeric',
-        'Ext.chart.axis.Category',
-        'Ext.chart.series.Pie'
+		'Ext.chart.axis.Numeric',
+		'Ext.chart.axis.Category',
+		'Ext.chart.series.Pie'
 	],
 		
 	config : {
@@ -22,18 +22,18 @@ Ext.define('FleetTouch.view.report.VehicleHealth', {
 		
 		this.callParent(arguments);
 		
-		var url = window.location.pathname.indexOf('/m/') === 0 ? 
-		          '/report/service' : 'data/dashboard/health/vehicle.json';
+		var url = window.location.pathname.indexOf('/m/') === 0 ? '/report/service' : 'data/dashboard/health/vehicle.json';
 		
 		Ext.Ajax.request({
 			url : url,
 			method : 'GET',
 			params : {  id : 'vehicle_health', health_type : 'health' },
-			success: function(response) {		    	
-			    var result = Ext.JSON.decode(response.responseText);
+			success: function(response) {
+				var resultObj = Ext.JSON.decode(response.responseText);
 
-			    if(result.success) {
-					var records = result.items, data = [];
+				if(resultObj.success) {
+					var records = resultObj.items;
+					var data = [];
 					for(var i = 0 ; i < records.length ; i++) {
 						if(records[i].name === 'health') {
 							data = records[i].summary;
@@ -46,13 +46,12 @@ Ext.define('FleetTouch.view.report.VehicleHealth', {
 						}
 					}
 
-					var store = this.down('chart').getStore();
-					store.setData(data);
+					this.down('chart').getStore().setData(data);
 				} else {
-				   	Ext.MessageBox.alert(T('label.failure'), result.msg);
+					Ext.MessageBox.alert(T('label.failure'), resultObj.msg);
 				}
 			},
-			failure : function(response) {
+			failure: function(response) {
 				Ext.MessageBox.alert(T('label.failure'), response.responseText);
 			},
 			scope : this
@@ -62,24 +61,25 @@ Ext.define('FleetTouch.view.report.VehicleHealth', {
 	buildChart : function() {
 		return {
 			xtype : 'chart',
-			themeCls : 'pie1',
-			theme : 'Demo',
-			shadow : false,
-			animate : true,
+			themeCls: 'pie1',
+			theme: 'Demo',
+			// theme: 'Base:gradients',
+			shadow: false,
+			animate: true,
 			toolbar : null,
-			insetPadding : 20,
-			legend : {
-				position : 'left',
+			insetPadding: 20,
+			legend: {
+				position: 'left',
 				labelFont : '10px',
 				boxStroke : '#cfcfcf'
 			},
 
-			store : Ext.create('Ext.data.JsonStore', {
-				fields : ['name', 'value'],
+			store: Ext.create('Ext.data.JsonStore', {
+				fields: ['name', 'value'],
 				data : []
 			}),
 
-			/*interactions : [
+            interactions: [
 				'reset',
 				'rotate',
 				'itemhighlight',
@@ -92,25 +92,25 @@ Ext.define('FleetTouch.view.report.VehicleHealth', {
 							panel.setHtml([
 								'<b>Vehicles in the ' + record.get('name') + ' state :</b>',
 								'<ul>' +
-								'<li> Count : ' + record.get('value') + '</li>' +
-								'</ul>'
+									'<li> Count : ' + record.get('value') + '</li>' +
+									'</ul>'
 								].join('')
 							);
 						}
 					}
 				}
-			],*/
+            ],
 
-			series : [ {
-				type : 'pie',
-				xField : 'value',
-				showInLegend : true,
-				donut : false,
-				tips : {
-					trackMouse : true,
-					width : 140,
-					height : 25,
-					renderer : function(storeItem, item) {
+			series: [ {
+				type: 'pie',
+				field: 'value',
+				showInLegend: true,
+				donut: false,
+				tips: {
+					trackMouse: true,
+					width: 140,
+					height: 25,
+					renderer: function(storeItem, item) {
 						// calculate percentage.
 						var total = 0;
 						store.each(function(rec) {
@@ -123,16 +123,16 @@ Ext.define('FleetTouch.view.report.VehicleHealth', {
 					}
 				},
 				colorSet : ['#00aa00', '#ffff00', '#aa0000'],
-				highlight : {
-					segment : {
-						margin : 20
+				highlight: {
+					segment: {
+						margin: 20
 					}
 				},
-				label : {
-					field : 'name',
-					display : 'rotate',
-					contrast : true,
-					font : '14px Arial'
+				label: {
+					field: 'name',
+					display: 'rotate',
+					contrast: true,
+					font: '14px Arial'
 				}
 			} ]
 		}
