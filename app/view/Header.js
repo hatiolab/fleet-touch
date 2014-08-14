@@ -6,49 +6,54 @@ Ext.define('FleetTouch.view.Header', {
 	
 	config : {
 		
-		title : 'Fleet Touch',
-		
+		title : 'ThingsFleet',
 		items : [
+			{
+				itemId : 'brand-logo',
+				align : 'left',
+				xtype : 'image',
+				html : '<img src="../fleet-touch/resources/images/brand-icon.png">',
+				cls : 'brand-logo'
+			},
 			{
 				itemId : 'map',
 				target : 'monitor_map',
-				align : 'left',
-				cls : 'headerView navMap',
-				width : 50
+				align : 'right',
+				text : 'map',
+				cls : 'headerView navMap'
 			},
 			{
 				itemId : 'info',
 				target : 'monitor_info',
-				align : 'left',
+				align : 'right',
+				text : 'info.',
 				cls : 'headerView navInfo'
 			},
 			{
 				itemId : 'incident',
 				target : 'monitor_incident',
-				align : 'left',
-				cls : 'app.css'
+				align : 'right',
+				text : 'incident',
+				cls : 'headerView navIncident'
 			},
 	        {
 				itemId : 'setting',
-	            iconCls : 'settings9',
-	            iconMask : true,
+	            cls : 'headerSide settings9',
 	            align : 'right'
 	        },
-			{
-	            iconCls : 'chat3',
-	            iconMask : true,
-	            align : 'right'
-	        },
+			// {
+ 	        //  iconCls : 'chat3',
+ 	        //  iconMask : true,
+ 	        //  align : 'right'
+ 	        // },
 			{
 				itemId : 'refresh',
-	            iconCls : 'refresh',
-	            iconMask : true,
+	            cls : 'headerSide refresh',
 	            align : 'right'
 	        },
 			{
 				itemId : 'collapse',
-	            iconCls : 'window',
-	            iconMask : true,
+	            cls : 'headerSide window',
 	            align : 'right'
 	        }
 	    ]
