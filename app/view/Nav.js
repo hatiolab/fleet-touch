@@ -16,7 +16,7 @@ Ext.define('FleetTouch.view.Nav', {
     ],
 
     config: {
-
+		html : '<div class="content-shadow"></div>',
         items: [
         {
             xtype: 'container',
@@ -24,6 +24,7 @@ Ext.define('FleetTouch.view.Nav', {
             layout: {
                 type: 'vbox'
             },
+			
             items: [
             {
                 xtype: 'button',

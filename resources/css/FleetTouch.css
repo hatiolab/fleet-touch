@@ -60,13 +60,13 @@
 .headerView.x-button-pressing .x-button-label,.headerView.active .x-button-label{color:#fff !important;}
 #header .x-button .x-button-icon.x-icon-mask{background-image:-webkit-linear-gradient(top, #c4dae9,#c4dae9 3%,#c4dae9)}
 #header .x-button.x-button-pressing .x-button-icon.x-icon-mask{background-image:-webkit-linear-gradient(top, #fff,#fff 3%,#fff)}
-#header.x-toolbar-dark{background-color: #2e2e2e;
+#header.x-toolbar-dark,.nav .x-navigation-bar.x-docked-top{background-color: #2e2e2e;
   background-image: -webkit-linear-gradient(top, #474747, #2e2e2e);
   background-image: -moz-linear-gradient(top, #474747, #2e2e2e);
   background-image: -o-linear-gradient(top, #474747, #2e2e2e);
   background-image: linear-gradient(top, #474747, #2e2e2e);
   border-color: transparent;}
-#header.x-toolbar{min-height:37px;padding-left:0;border:none;}
+#header.x-toolbar, .nav .x-toolbar{min-height:37px;padding-left:0;border:none;}
 #header .x-body{background:url('../images/bg-brand.png') no-repeat;}
 #header .x-center > .x-floating{position:inherit !important;}
 #header .brand-logo{margin:3px 0 0 27px;}
@@ -76,34 +76,34 @@
 #header .headerSide.x-button-pressing{background-position-x:-25px;}
 
 /*nav style*/
-.nav .x-navigation-bar.x-docked-top{background:url('../images/darkGradient.png') 0 80% repeat-x !important;}
 .nav .x-toolbar.x-docked-top{border-bottom:0;}
-.nav .x-button{border-radius:0;border:0;color:#b7b7b7;background:none;}
-.nav .statusPanel{background:url('../images/bgNavPanel.png') 0 100% repeat-x;border-top:1px solid #1e2127;}
-.nav .x-carousel{background:url('../images/bgNavCarousel.png') 0 100% repeat-x}
-.navBtn{background:url('../images/bgNavMenu.png') repeat-x !important;height:50px;}
-.navBtn.x-button-pressing{background:url('../images/bgNavMenuActive.png') repeat-x transparent !important;}
-.navBtn .x-button-icon{background:url('../images/iconNavMenu.png') no-repeat !important;}
-.navBtn .x-button-icon.iconVehicle{background-position:0 5px !important;}
-.navBtn .x-button-icon.iconDriver{background-position:0 -35px !important;}
-.navBtn .x-button-icon.iconReport{background-position:0 -75px !important;}
-.navBtn .x-button-label{text-align:left;text-indent:7px;}
-.statusPanel .x-container{background:url('../images/arrowNavPanel.png') 0 12px no-repeat;position:absolute;display:block;padding:10px 0 5px 15px;color:#95bcea;font-size:13px;}
-.nav .incidentPanel .x-innerhtml,.nav .groupPanel .x-innerhtml{background:url('../images/arrowNavPanel.png') 0 12px no-repeat;padding:10px 0 5px 15px;color:#95bcea;font-size:13px;font-weight:bold;}
+.nav .x-button{border-radius:0;border:0;color:#d7d7d7;background:none;}
+.nav .statusPanel{background:url('../images/bgNavPanel.png') repeat-x #424242;border-top:1px solid #1e2127;}
+.nav .x-carousel{background-color:#252525}
+.navBtn{background:url('../images/arrowDarkGray.png') 95% 50% no-repeat #363636 !important;height:50px;border-bottom:1px solid #444 !important;}
+.navBtn.x-button-pressing{background-color:#b84145 !important;color:#fff;}
+.navBtn .x-button-icon{background:url('../images/iconNavMenu.png') no-repeat !important;height:38px;}
+.navBtn .x-button-icon.iconVehicle{background-position:0 4px !important;}
+.navBtn .x-button-icon.iconDriver{background-position:0 -36px !important;}
+.navBtn .x-button-icon.iconReport{background-position:0 -74px !important;}
+.navBtn .x-button-label{text-align:left;}
+.statusPanel .x-container{background:url('../images/arrowNavPanel.png') no-repeat;position:absolute;display:block;padding:10px 0 5px 15px;color:#95bcea;font-size:13px;}
+.nav .incidentPanel .x-innerhtml,.nav .groupPanel .x-innerhtml{padding:10px 0 5px 15px;color:#e95a5c;font-size:14px;}
 .nav .x-button.btnDriving{background:url('../images/statusDriving.png') 50% 15px no-repeat;padding:55px 0 0 0;}
 .nav .x-button.btnStop{background:url('../images/statusStop.png') 50% 15px no-repeat;padding:55px 0 0 0;}
 .nav .x-button.btnIncident{background:url('../images/statusIncident.png') 50% 15px no-repeat;padding:55px 0 0 0;}
 .nav .x-button.btnMaint{background:url('../images/statusMaint.png') 50% 15px no-repeat;padding:55px 0 0 0;}
-.nav .statusPanel .x-button-label{font-size:13px;color:#ccc;font-family:'Trebuchet MS';}
+.nav .statusPanel .x-button-label{font-size:12px;color:#ccc;font-family:'Trebuchet MS';font-weight:300;}
 .nav .statusPanel .x-button-label span{font-size:24px;color:#fff;line-height:1.3;}
 .nav .x-carousel-item{overflow:hidden;}
-.nav .x-carousel-item .x-button-label a{color:#eee;text-decoration:none;font-size:17px;}
-.nav .x-carousel-item .x-button-label a span{color:#bfbfbf;font-size:13px;}
+.nav .x-carousel .x-body{padding-bottom:25px;}
+.nav .x-carousel-item .x-button-label a{color:#eee;text-decoration:none;font-size:16px;font-weight:300;}
+.nav .x-carousel-item .x-button-label a span{display:inline-block;text-indent:4px;color:#bfbfbf;font-size:12px;}
 .nav .x-carousel-item .incidentPanel .x-button-label a span{display:block;}
-.nav .x-carousel-item .x-button-label{text-align:left;width:100px;text-overflow:ellipsis;}
-.nav .incidentPanel .x-button{background:url('../images/iconStatusIncident.png') 15px 9px no-repeat;padding-left:40px;padding-bottom:3px;}
-.nav .groupPanel.vGroup .x-button{background:url('../images/iconNavVGroup.png') 15px 4px no-repeat;padding-left:42px;padding-bottom:10px;}
-.nav .groupPanel.dGroup .x-button{background:url('../images/iconNavDGroup.png') 15px 4px no-repeat;padding-left:42px;padding-bottom:10px;}
+.nav .x-carousel-item .x-button-label{text-align:left;width:100px;text-overflow:ellipsis;font-weight:400;}
+.nav .incidentPanel .x-button{background:url('../images/iconStatusIncident.png') 15px 9px no-repeat;padding-left:40px;padding-bottom:3px;border-bottom:1px solid #444 !important;}
+.nav .groupPanel.vGroup .x-button{background:url('../images/iconNavVGroup.png') 15px 4px no-repeat;padding-left:42px;padding-bottom:10px;border-bottom:1px solid #444 !important;}
+.nav .groupPanel.dGroup .x-button{background:url('../images/iconNavDGroup.png') 15px 4px no-repeat;padding-left:42px;padding-bottom:10px;border-bottom:1px solid #444 !important;}
 .x-carousel-indicator span{width:7px;height:7px;}
 .nav .x-carousel-indicator-dark span.x-carousel-indicator-active{background-color:#fff;opacity:0.9;}
 .nav .x-carousel-indicator-dark span{background-color:#fff;opacity:0.3;}
