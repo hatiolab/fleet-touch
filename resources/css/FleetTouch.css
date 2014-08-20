@@ -134,7 +134,7 @@
 .grayBg{background:url('../images/bgWhiteShadowPanel.png') repeat-x #e8edef;}
 .grayBg.x-form .x-scroll-container{background:url('../images/bgWhiteShadowPanel.png') repeat-x #e8edef;}
 .imgVehicle,.imgDriver{
-	border:5px solid #fff;-webkit-border-radius:5px;border-radius: 5px;
+	border:2px solid #fff;-webkit-border-radius:5px;border-radius: 5px;
 	width:110px;height:115px;background-position:50% 50%;margin-right:10px;
 	box-shadow: 1px 2px 2px #888888;
 }
@@ -151,17 +151,31 @@
 .shotHList .x-button-label a{text-decoration:none;color:#333;}
 .shotHList .x-button-label span{display:block;font-size:13px;color:#666;}
 .divHAlign .x-innerhtml div{float:left;padding:0 15px 0 37px;margin:5px 0 0 10px;border-right:1px dotted #999;font-size:11px;font-weight:bold;color:#666;}
-.divHAlign .x-innerhtml div span{display:block;font-size:16px;color:#111;}
+.divHAlign .x-innerhtml div span{display:block;margin-top:-2px;font-size:16px;color:#111;}
 .divHAlign .iconImplus{background:url('../images/iconImpluse.png') no-repeat;}
 .divHAlign .iconETemp{background:url('../images/iconETemp.png') no-repeat;}
 .divHAlign .iconVelocity{background:url('../images/iconVelocity.png') no-repeat;}
 .divHAlign .iconOBD{background:url('../images/iconOBD.png') no-repeat;}
 .divHAlign .iconFuel{background:url('../images/iconFuel.png') no-repeat;}
 .divHAlign .iconTime{background:url('../images/iconTime.png') 2px 0 no-repeat;}
-.divHAlign .iconMap{background:url('../images/iconHeaderView.png') -8px -6px no-repeat;}
-.divHAlign .iconTrack{background:url('../images/iconHeaderView.png') -7px -83px no-repeat;}
+.divHAlign .iconMap{background:url('../images/iconMap.png') 2px 1px no-repeat;}
+.divHAlign .iconTrack{background:url('../images/iconDistance.png') 2px 0 no-repeat;}
 .shotHList .x-field{background-color:transparent;}
-.shotHList .x-toggle-field .x-component-outer{padding:0.4em 0.5em;}
+.shotHList .x-toggle-field .x-component-outer{padding:0.4em 0.5em 0 0.5em;}
+.shotHList .x-toggle{
+	width:110px;height:30px;border-color:#a2a5a9;background-color: #c8cfd5;
+	background-image: -webkit-linear-gradient(top, #ccd4d8, #c8cfd5);
+	background-image: -moz-linear-gradient(top, #ccd4d8, #c8cfd5);
+	background-image: -o-linear-gradient(top, #ccd4d8, #c8cfd5);
+	background-image: linear-gradient(top, #ccd4d8, #c8cfd5);
+}
+.shotHList .x-thumb:after{
+	width:35px;height:30px;border-color:#a2a5a9;background-color: #eef1f4;top:-1px;left:-1px;
+	background-image: -webkit-linear-gradient(top, #fff, #eef1f4);
+	background-image: -moz-linear-gradient(top, #fff, #eef1f4);
+	background-image: -o-linear-gradient(top, #fff, #eef1f4);
+	background-image: linear-gradient(top, #fff, #eef1f4);
+}
 .x-img.imgVehicle,.x-img.imgDriver{background-size:110px 115px;}
 .shotHList + .x-map .bubbleWrap{padding:5px}
 
