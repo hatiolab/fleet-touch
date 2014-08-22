@@ -192,7 +192,7 @@ Ext.define('FleetTouch.view.vehicle.Summary', {
 			itemId : 'runningInfo',
 			data : null,
 			flex : 1,
-			cls : 'paddingT25 paddingR10 paddingL10',
+			cls : 'paddingT10 paddingR10 paddingL10',
 			tpl : [
 			'<div class="distance">',
 				'<div class="total">'+ T('label.total_distance') +'<span class="km">{total_distance} km</span><span class="mile">{total_distance_mile} mile</span></div>',
@@ -210,7 +210,6 @@ Ext.define('FleetTouch.view.vehicle.Summary', {
 		return {
 			xtype : 'component',
 			itemId : 'consumableInfo',
-			flex : 1,
 			cls : 'summaryConsumable',
 			tpl : [
 			'<div class="subtitle">' + T('title.consumable_item') + '</div>',
