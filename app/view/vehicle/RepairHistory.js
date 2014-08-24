@@ -37,7 +37,7 @@ Ext.define('FleetTouch.view.vehicle.RepairHistory', {
 			scrollable : 'vertical',
 
 			tpl : [
-				'<div class="reportWrap type2">',
+				'<div class="reportWrap type3">',
 					'<div class="reportTitle">'+ T('title.maintenance_history') + '</div>',
 					'<div class="reportItem">',
 						'<table frame="hsides" rules="rows">',

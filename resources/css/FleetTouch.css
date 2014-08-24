@@ -220,6 +220,7 @@
 
 .reportLayoutFull{clear:both}
 .reportWrap.type2{background:url('../images/bgWhiteShadowPanel.png') repeat-x #e8edef;}
+.reportWrap.type3{background:none;}
 .reportItem{background-color:#fff;-webkit-border-radius:7px;border-radius:7px;border:1px solid #ccc;padding:15px;margin:5px 15px 15px 15px}
 .reportLayoutHalf{float:left;width:49%;}
 .reportLayoutHalf .reportItem{margin:0 0 15px 15px;padding:15px}
@@ -268,6 +269,15 @@
 .summaryRepair .itemCell{padding:0px 10px 0 15px;}
 .summaryRepair .subtitle{margin-top:10px;}
 .percent span{background:url('../images/bgHealthBar.png') 30% 0 no-repeat;padding-right:10px;display:block;text-align:right;}
+#vehicle_repair .grayBg,#vehicle_repair .x-tabbar-dark{background:none !important;border-bottom:0;}
+#vehicle_repair .x-tabbar .x-tab{background:none;padding:3px 10px 0 0px;color:#585858;border-radius:0;}
+#vehicle_repair .x-tabbar .x-tab.x-tab-active{color:#cd2b39;}
+#vehicle_repair .x-tabbar .x-tab .x-button-icon{background:url('../images/icon-tab-repair.png') -34px -8px no-repeat;}
+#vehicle_repair .x-tabbar .x-tab .x-button-label{top:-1px;margin-left:.2em;padding:0;font-size:15px;}
+#vehicle_repair .x-tabbar .x-tab .tabTrace{background-position-y:-48px;}
+#vehicle_repair .x-tabbar .x-tab .tabRepairTime{background-position-y:-89px;}
+#vehicle_repair .x-tabbar .x-tab .tabConditionTerm{background-position-y:-129px;}
+#vehicle_repair .x-tabbar .x-tab.x-tab-active .x-button-icon{background-position-x:-4px;}
 
 /*tab style*/
 .x-tabbar-dark.x-docked-bottom{background:url('../images/bgNavPanel.png') repeat-x;}
